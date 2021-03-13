@@ -1,15 +1,27 @@
-#include <stdio.h>
- 
+#include <iostream>
+
+using namespace std;
+
 int main()
 {
-    float p = 3.14;
+    string c;
+    float xc, yc; //координаты для окружности
+  //  float x1, x2, x3; // абсциссы для треугольника
+  //  float y1, y2, y3; // ординаты треугольника
+    float pi=3.1415;
+    float R; // радиус окружности
     float perimeter, area;
-    printf("Enter the radius ");
-    float R;
-    scanf("%f", &R);
-    perimeter = 2*p*R;
-    area = p*R*R;
-    printf("perimeter =%.4f ", perimeter);
-    printf("area = %.4f ", area);
+
+ 
+  cin >> c;
+   if(c=="circle") {
+    cin >> xc >> yc >> R;
+    perimeter = 2*pi*R;
+    area = pi*R*R;
+    cout << "perimeter = "<< perimeter<< '\n';
+    cout << "area = "<< area;
+}
+
+
     return 0;
 }
