@@ -4,6 +4,7 @@ using namespace std;
 
 int main()
 {
+	setlocale(LC_ALL,"Russian");
     string c;
     float xc, yc; //координаты для окружности
   //  float x1, x2, x3; // абсциссы для треугольника
