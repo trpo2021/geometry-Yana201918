@@ -4,13 +4,13 @@ using namespace std;
 
 int main()
 {
-	setlocale(LC_ALL,"Russian");
+    setlocale(LC_ALL,"Russian");
     string c;
-    float xc, yc; //координаты для окружности
-  //  float x1, x2, x3; // абсциссы для треугольника
-  //  float y1, y2, y3; // ординаты треугольника
+    float xc, yc; //РєРѕРѕСЂРґРёРЅР°С‚С‹ РѕРєСЂСѓР¶РЅРѕСЃС‚Рё
+  //  float x1, x2, x3; // Р°Р±СЃС†РёСЃСЃС‹ С‚СЂРµСѓРіРѕР»СЊРЅРёРєР°
+  //  float y1, y2, y3; // РѕСЂРґРёРЅР°С‚С‹ С‚СЂРµСѓРіРѕР»СЊРЅРёРєР°
     float pi=3.1415;
-    float R; // радиус окружности
+    float R; // СЂР°РґРёСѓСЃ РѕРєСЂСѓР¶РЅРѕСЃС‚Рё
     float perimeter, area;
 
  
