@@ -6,6 +6,7 @@
 
 int main()
 {
+<<<<<<< HEAD
 char input[1000]="";
 int k = 0;
 char* buffer;
@@ -13,6 +14,16 @@ bool isRight = true;
 while (strcmp(input, "exit"))
 {
 scanf("%[^\n]s", input);
+=======
+    setlocale(LC_ALL,"Russian");
+    string c;
+    float xc, yc; //координаты окружности
+  //  float x1, x2, x3; // абсциссы треугольника
+  //  float y1, y2, y3; // ординаты треугольника
+    float pi=3.1415;
+    float R; // радиус окружности
+    float perimeter, area;
+>>>>>>> fcbc4804490e5a4ea02706d179dbbf6250ecf314
 
 buffer = strtok(input," .,()");
 if (_strcmpi(buffer, "circle") == 0)
