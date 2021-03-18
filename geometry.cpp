@@ -1,4 +1,4 @@
-#define _CRT_SECURE_NO_WARNINGS
+
 #include <string.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -17,7 +17,7 @@ scanf("%[^\n]s", input);
 buffer = strtok(input," .,()");
 if (_strcmpi(buffer, "circle") == 0)
 {
-float x, y, R, P, S; // ????????
+float x, y, R, P, S; 
 buffer = strtok(NULL, " ,()");
 x = atof(buffer);
 buffer = strtok(NULL, " ,()");
