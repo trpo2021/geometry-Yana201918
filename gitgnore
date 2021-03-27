@@ -1,5 +1,7 @@
 # Prerequisites
+*.exe
 *.d
+bin\geometry
 
 # Compiled Object files
 *.slo
