@@ -14,7 +14,7 @@ SRC_DIR = src
 APP_PATH = $(BIN_DIR)/$(APP_NAME)
 LIB_PATH = $(OBJ_DIR)/$(SRC_DIR)/$(LIB_NAME)/$(LIB_NAME).a
 
-SRC_EXT = c
+SRC_EXT = cpp
 
 APP_SOURCES = $(shell find $(SRC_DIR)/$(APP_NAME) -name '*.$(SRC_EXT)')
 APP_OBJECTS = $(APP_SOURCES:$(SRC_DIR)/%.$(SRC_EXT)=$(OBJ_DIR)/$(SRC_DIR)/%.o)
@@ -38,7 +38,7 @@ $(LIB_PATH): $(LIB_OBJECTS)
 $(OBJ_DIR)/$(SRC_DIR)/$(APP_NAME)/%.o: $(SRC_DIR)/$(APP_NAME)/%.cpp
 	$(CC) -c $(CFLAGS) $(CPPFLAGS) $< -o $@
 
-$(OBJ_DIR)/$(SRC_DIR)/$(LIB_NAME)/%.o: $(SRC_DIR)/$(LIB_NAME)/%.cpp	
+$(OBJ_DIR)/$(SRC_DIR)/$(LIB_NAME)/%.o: $(SRC_DIR)/$(LIB_NAME)/%.$(SRC_EXIT)	
 	$(CC) -c $(CFLAGS) $(CPPFLAGS) $< -o $@
 
 .PHONY: clean
