@@ -1,3 +1,4 @@
+CC = g++
 APP_NAME = geometry
 LIB_NAME = libgeometry
 
@@ -29,16 +30,19 @@ all: $(APP_PATH)
 -include $(DEPS)
 
 $(APP_PATH): $(APP_OBJECTS) $(LIB_PATH)
-$(CC) $(CFLAGS) $(CPPFLAGS) $^ -o $@ $(LDFLAGS) $(LDLIBS)
+	$(CC) $(CFLAGS) $(CPPFLAGS) $^ -o $@ 
 
 $(LIB_PATH): $(LIB_OBJECTS)
-ar rcs $@ $^
+	ar rcs $@ $^
 
-$(OBJ_DIR)/%.o: %.c
-$(CC) -c $(CFLAGS) $(CPPFLAGS) $< -o $@
+$(OBJ_DIR)/$(SRC_DIR)/$(APP_NAME)/%.o: $(SRC_DIR)/$(APP_NAME)/%.cpp
+	$(CC) -c $(CFLAGS) $(CPPFLAGS) $< -o $@
+
+$(OBJ_DIR)/$(SRC_DIR)/$(LIB_NAME)/%.o: $(SRC_DIR)/$(LIB_NAME)/%.cpp	
+	$(CC) -c $(CFLAGS) $(CPPFLAGS) $< -o $@
 
 .PHONY: clean
 clean:
-$(RM) $(APP_PATH) $(LIB_PATH)
-find $(OBJ_DIR) -name '*.o' -exec $(RM) '{}' \;
-find $(OBJ_DIR) -name '*.d' -exec $(RM) '{}' \;
+	$(RM) $(APP_PATH) $(LIB_PATH)
+	find $(OBJ_DIR) -name '*.o' -exec $(RM) '{}' \;
+	find $(OBJ_DIR) -name '*.d' -exec $(RM) '{}' \;
