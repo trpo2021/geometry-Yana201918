@@ -34,3 +34,7 @@ bin\geometry
 *.app
 
 .vs/
+bin
+obj
+src
+
