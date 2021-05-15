@@ -1,4 +1,4 @@
-CC = g++
+CC = gññ
 APP_NAME = geometry
 LIB_NAME = libgeometry
 
