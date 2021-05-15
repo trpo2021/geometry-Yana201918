@@ -8,7 +8,6 @@
 int main()
 {
     char input[1000] = "";
-    int k = 0;
     char* buffer;
     while (strcmp(input, "exit")) {
         scanf("%[^\n]s", input);
