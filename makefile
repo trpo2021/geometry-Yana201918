@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-all: geometry.exe
-geometry.exe: geometry.cpp
-	g++ -o geomety.exe geometry.cpp
-=======
-CC = gññ
+CC = g++
 APP_NAME = geometry
 LIB_NAME = libgeometry
 
@@ -51,4 +46,3 @@ clean:
 	$(RM) $(APP_PATH) $(LIB_PATH)
 	find $(OBJ_DIR) -name '*.o' -exec $(RM) '{}' \;
 	find $(OBJ_DIR) -name '*.d' -exec $(RM) '{}' \;
->>>>>>> lab-3
