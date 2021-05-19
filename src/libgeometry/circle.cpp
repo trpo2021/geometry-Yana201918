@@ -21,6 +21,7 @@ void Circle()
     }
     perimeter = 2 * R * 3.1415926536;
     area = R * R * 3.1415926536;
+    
     printf("perimeter=%f\narea=%f\n\n", perimeter, area);
     delete buffer;
 }
